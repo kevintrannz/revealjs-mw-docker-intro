@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Docker Introduction</title>
+
+		<meta name="description" content="Introducing Docker">
+		<meta name="author" content="Kevin Tran">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="custom.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+                <section class="cover" data-background="media/Ports_of_Auckland.jpg">
+					<h2 style="color:greenyellow; text-shadow: 0 1px 0 black">Docker Introduction</h2>
+				</section>
+
+				<section class="cover" data-background="media/docker_stack_laptop.jpg" style="color:white">
+					<div>
+						<h2 style="color:white">What was the last "big thing" in Dev Ops ? </h2>
+					</div>
+					<div  style="text-align:left">
+						<ul>
+							<li class="fragment highlight-current-blue visible" data-fragment-index="1">New programming languages, tools or libs for Dev Ops ?</li>
+							<li class="fragment highlight-current-blue visible" data-fragment-index="2">CI/CD tool chain ?</li>
+							<li class="fragment highlight-current-blue visible" data-fragment-index="3">CI/CD SaaS offerings ?</li>
+							<li class="fragment highlight-current-blue visible" data-fragment-index="4">PaaS ?</li>
+							<li class="fragment highlight-current-blue visible" data-fragment-index="5">...</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>What is Docker?</h2>
+					</div>
+					<div>
+						<img src="media/Docker_Logo.svg" alt="Docker Logo" />
+						<p>Docker is a platform for managing the delivery of distributed applications in <strong>lightweight</strong>, <strong>portable</strong>, <strong>self sufficient</strong> containers</p>
+						<p>Containers are an abstraction of capabilities built into the OS kernel</p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>The Analogy</h2>
+					</div>
+					<div style="width:100%">
+						<div class="fragment fade-in" data-fragment-index="1" style="width:50%; float:left">
+							<img src="media/Loading_the_Hold.jpg" alt="Loading Hold" />
+						</div>
+						<div class="fragment fade-in" data-fragment-index="2" style="width:50%; float:right">
+							<img src="media/Container_Ship.jpg" alt="Container Ship" />
+						</div>
+					</div>
+					<div style="width:100%">
+						<div class="fragment fade-in" data-fragment-index="1" style="width:50%; float:left">
+							<p>Before 20th century, freight transportation was inefficient and hazardous</p>
+						</div>
+						<div class="fragment fade-in" data-fragment-index="2" style="width:50%; float:right">
+							<p>The shipping container revolutionized freight transportation</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Software Application Dependencies</h2>
+					</div>
+					<div>
+						<img src="media/Software_App_Dependencies.svg" alt="Software Dependencies" />
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Docker and Containers</h2>
+					</div>
+					<div style="width:100%">
+						<img src="media/Build_Ship_Run.svg" alt="Build Ship Run" />
+					</div>
+					<div style="clear:both">
+						<p>The packaged container is guaranteed to run unchanged on any platform that runs the Docker Engine</p>
+					</div>
+					<div>
+						<p>Significantly reduces the friction between development, integration, staging and production environments</p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Traditional VM virtualization</h2>
+					</div>
+					<div>
+						<img src="media/traditional_virtualization.png" alt="traditional_virtualization.png" />
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Container virtualization</h2>
+					</div>
+					<div>
+						<img src="media/docker_virtualization.png" alt="docker_virtualization.png" />
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Containers vs VMs</h2>
+					</div>
+					<div>
+						<img src="media/VM_vs_Container.svg" alt="VM vs Container" />
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Containers and VM</h2>
+					</div>
+					<div>
+						<img src="media/docker_containers_in_VM.jpg" alt="docker_containers_in_VM.jpg" />
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Microservices</h2>
+					</div>
+					<div style="width:100%">
+						<div style="width:45%; float:left">
+							<img src="media/Microservices.svg" alt="Microservices" />
+						</div>
+						<div style="width:55%; float:right; text-align:left">
+							<p>Docker has not been designed as a leaner replacement for virtual machines</p>
+							<p>Docker's aim is to facilitate the execution of <strong>microservices</strong></p>
+							<p>Not a physical constraint, but a matter of <strong>ideology</strong></p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Docker Benefits</h2>
+					</div>
+					<div style="width:100%">
+						<div style="width:50%; float:left">
+							<img src="media/Benefits.svg" alt="Benefits" />
+						</div>
+						<div style="width:50%; float:right; text-align:left">
+							<p>Enhanced <strong>business agility</strong> through expeditious application deployment</p>
+							<p><strong>Reduced costs</strong>, less reliance on expensive software licences</p>
+							<p>Increased workload density - <strong>better return</strong> on existing compute resources</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Docker Use Cases</h2>
+					</div>
+					<div style="width:100%">
+						<div style="width:25%; float:left">
+							<img src="media/Cogs.svg" alt="Use Cases" />
+						</div>
+						<div style="width:70%; float:right; text-align:left">
+							<p>Standardised, reproduceable development environments</p>
+							<p>Microservices aids delivery of faster, better quality software</p>
+							<p>Incorporation into continuous integration and continuous delivery workflows</p>
+							<p>Safe experimentation with software components and versions</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Container Use Cases</h2>
+					</div>
+					<div>
+							<p>"Everything at Google runs in a containers" Joe Beda - a senior staff software engineer at Google</p>
+							<p>We start 2+ billion containers per week ! (2014)</p>
+							<p>How many containers fire up "every second of every minute of every hour of every day" ?</p>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Docker Image Structure</h2>
+					</div>
+					<div style="width:100%">
+						<div style="width:100%; float:left">
+							<img src="media/docker_image_structure.png" alt="docker_image_structure.png" />
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>Docker Image Infrastructure</h2>
+					</div>
+					<div style="width:100%">
+						<div style="width:100%; float:left">
+							<img src="media/docker_image_infrastructure.png" alt="docker_image_infrastructure.png" />
+						</div>
+					</div>
+				</section>
+
+                <section class="cover" data-background="media/container-background.jpg">
+					<h2 style="color:greenyellow; text-shadow: 0 1px 0 black; size: 100cm">Q & A</h2>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+                slideNumber: 'h.v',
+				progress: false,
+				history: false,
+				center: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+	</body>
+</html>
